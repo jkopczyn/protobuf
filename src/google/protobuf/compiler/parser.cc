@@ -985,7 +985,7 @@ bool Parser::ParseMessageFieldNoLabel(
     }
     if (map_field.is_map_field) {
       if (field->has_oneof_index()) {
-        AddError("Map fields are not allowed in oneofs.");
+        AddError("Maps are considered repeated fields, which are not allowed in oneofs.");
         return false;
       }
       if (field->has_label()) {

@@ -1521,7 +1521,7 @@ TEST_F(ParseErrorTest, MapInOneof) {
       "    map message_field = 2;\n"  // a normal message field is OK
       "  }\n"
       "}\n",
-      "2:7: Map fields are not allowed in oneofs.\n");
+      "2:7: Maps are considered repeated fields, which are not allowed in oneofs.\n");
 }
 
 TEST_F(ParseErrorTest, LabelForMap) {
